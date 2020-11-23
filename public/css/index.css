@@ -63,15 +63,22 @@ nav ul li a:hover {
 .article {
 	border: 2px solid #dddddd;
 	border-radius: 5px;
-	padding: 12px;
-	margin: 12px;
+	margin: 12px 12px 40px 12px;
 }
 
 .article h2 {
 	font-size: 32px;
-	padding: 5px 0px;
 	margin-bottom: 10px;
 	text-align: center;
+	background-color: #3a3a3a;
+	color: white;
+	padding: 15px 12px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;	
+}
+
+.article-body {
+	padding: 12px;
 }
 
 .article-body p {
