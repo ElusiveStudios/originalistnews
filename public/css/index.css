@@ -108,3 +108,19 @@ footer {
 	margin-top: 200px;
 	text-align: center;
 }
+
+@media all and (max-width: 600px) {
+	.articles-container {
+		margin: 0px;
+		padding: 0px;
+		width: fit-content;
+		width: -moz-fit-content;
+		margin: auto;
+	}
+	.articles {
+		width: 320px;
+	}
+	.article-body img {
+		width: 290px;
+	}
+}
