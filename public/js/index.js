@@ -38,7 +38,7 @@ function loadPage(endpoint, response) {
 								<div class="article-body">
 									<p>${endText}</p>`;
 				try {
-					finalHTML += `<img style="display:block;" src="${response[x].Image[0].url}"alt="Placeholder for now"/>`;
+					finalHTML += `<img style="display:block;margin:auto;" src="${response[x].Image[0].url}" alt="Placeholder for now"/>`;
 				} catch (e) {
 					//Nothing to do here, no images included
 				}
