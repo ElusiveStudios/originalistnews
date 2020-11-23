@@ -7,7 +7,8 @@
 	box-sizing: border-box;
 	color: #3a3a3a;
 	line-height: 1;
-	font-family: 'Xanh Mono', monospace;
+	/*font-family: 'Xanh Mono', monospace;*/
+	font-family: 'Playfair Display', serif;
 }
 
 header {
@@ -53,11 +54,10 @@ nav ul li a:hover {
 .articles-container {
 	margin: 20px;
 	padding: 10px;
-	/*border: 1px
-			solid #3a3a3a;*/
 	border-radius: 3px;
 	width: fit-content;
 	width: -moz-fit-content;
+	width: 600px;
 }
 
 .articles-container h2 {
@@ -72,11 +72,8 @@ nav ul li a:hover {
 }
 
 .article-body p {
-	/*width: 200px;*/
 	padding: 5px;
-	font-family: monospace;
-	/*display: table-cell; 
-			vertical-align: middle;*/
+	font-family: 'Playfair Display', serif;
 }
 
 .article-body img {
