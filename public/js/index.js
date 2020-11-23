@@ -34,15 +34,16 @@ function loadPage(endpoint, response) {
 						endText += t[y];
 					}
 				}
-				var finalHTML =`<h2>${response[x].Title}</h2>
-								<div class="article-body">
-									<p>${endText}</p>`;
+				var finalHTML =`<div class="article">
+									<h2>${response[x].Title}</h2>
+									<div class="article-body">
+										<p>${endText}</p>`;
 				try {
 					finalHTML += `<img style="display:block;margin:auto;" src="${response[x].Image[0].url}" alt="Placeholder for now"/>`;
 				} catch (e) {
 					//Nothing to do here, no images included
 				}
-				finalHTML += `</div>`;
+				finalHTML += `</div></div>`;
 				$('.articles-container').prepend(finalHTML);
 			}
 			break;
