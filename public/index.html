@@ -1,0 +1,211 @@
+	<!DOCTYPE html> <html lang="en"> <head> <title>Originalist 
+	News</title>
+			<meta charset="utf-8"> <meta name="viewport" 
+			content="width=device-width, initial-scale=1, 
+			shrink-to-fit=no"> <meta name="description" 
+			content="Truth in media the originalist way"> 
+			<link 
+			href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" 
+			rel="stylesheet"> <link 
+			href="vendor/fontawesome/css/all.min.css" 
+			rel="stylesheet"> <link href="css/index.css" 
+			rel="stylesheet">
+		</head> <body> <header><!-- Filled by API call to 
+		page-logo
+			--></header> <main> <nav><!-- Filled by API call 
+				to navigations --></nav> <div 
+				class="articles-container"><!-- Filled 
+				by API call to articles --></div>
+			</main> <footer><!-- Filled by API call to 
+			footer --></footer>
+		</body>
+		
+		<script 
+		src="https://code.jquery.com/jquery-3.5.1.min.js" 
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" 
+		crossorigin="anonymous"></script> <script 
+		src="js/index.js"></script> <script>
+			
+			APICall('articles'); APICall('page-logo'); 
+			APICall('page-background'); 
+			APICall('navigations'); APICall('footer');
+			
+			//loadArticles(articleResp); loadLogo(logoResp); 
+			//loadBg(bgResp); loadNav(navResp); 
+			//loadFooter(footerResp);
+			
+			//loadArticles(APICall('articles')); 
+			//loadLogo(APICall('page-logo')); 
+			//loadBg(APICall('page-bg'));
+		
+			function APICall(endpoint) { var request; 
+			if(request) {
+					request.abort();
+				}
+				request = $.ajax({ type: "get", url: 
+					"/"+endpoint
+				});
+				request.done(function(response, 
+				textStatus, jqXHR) {
+					console.log(response); 
+					loadPage(endpoint, response);
+				});
+			}
+			
+			function loadPage(endpoint, response) { 
+			switch(endpoint)
+				{ case "articles": for(x = 0; x < 
+						response.length; x++) {
+							var t = 
+							response[x].Body.split("|"); 
+							var endText = 
+							t[0]; for(y = 1; 
+							y < t.length; 
+							y++) {
+								if(y > 0 
+								&& y%2 
+								!== 0) {
+									endText 
+									+= 
+									` 
+									<a 
+									href="${t[y]}">${t[y]}</a> 
+									`;
+								} else {
+									endText 
+									+= 
+									t[y];
+								}
+							}
+							var finalHTML = 
+							`<h2>${response[x].Title}</h2>
+										<div 
+										class="article-body">
+											<p>${endText}</p> 
+										`;
+							try { finalHTML 
+								+= `<img 
+								style="display:block;" 
+								src="${response[x].Image[0].url}"
+												alt="Placeholder 
+												for 
+												now"/>
+								`;
+							} catch(e) {
+								//Nothing, 
+								//there 
+								//is no 
+								//img 
+								//html
+							}
+							finalHTML += 
+							`</div>`; 
+							$('.articles-container').prepend(finalHTML);
+						}					
+						break; case "page-logo": 
+						$('header').append(`<img 
+						class="banner" 
+						src="${response.Image[0].url}" 
+						alt="Truth in Media">`); 
+						break;
+					case "page-background": 
+						$('#body').prepend(`<img 
+						id="#background" 
+						style="background-image:${response.Image[0].url}">`); 
+						break;
+					case "navigations": var t = 
+					`<ul>`; var seq = 1; for(i = 0; 
+					i < response.length; i++) {
+						if(response[i].Order == 
+						seq) {
+							seq++; t += 
+							`<li><a 
+							href="$[response[i].URL}">${response[i].Name}</a></li>`;
+						}
+					}
+						$('nav').html(t); break; 
+					case "footer":
+						var t = `&copy; 2020 
+							Originialist 
+							Media Corp.`;
+						$('footer').html(t); 
+						break;
+					default: break;
+				}
+			
+			}
+		</script> </html> <style> * { margin: 0; padding: 0; 
+		font-size:
+			16px; border: none; box-sizing: border-box; 
+			color:
+			#3a3a3a;
+			line-height: 1; font-family: 'Xanh Mono', 
+			monospace;
+		}
+		header { background-color: #d1d1d1; box-shadow: 0px 0px 
+		3px 0px
+			#8f8f8f;
+		}
+		
+		header h1 { padding: 10px 32px; font-size: 62px; width: 
+		600px;
+			margin: 0px 50px; background-color: white;
+		}
+		
+		header .banner { width: 100%;
+		}
+		
+		nav ul li { display: inline-block; width: 25%; 
+		text-align:
+			center;
+			
+		}
+		
+		nav ul li a { text-decoration: none; display: block; 
+		width:
+			100%; padding: 15px 0px; background-color: 
+			#656565;
+			color: #fff; font-weight: bold; margin-top: 1px; 
+			font-family: Arial;
+		}
+		
+		nav ul li a:hover { color: #656565; background-color: 
+		#fff;
+		}
+		
+		.articles-container { margin: 20px; padding: 10px; 
+		/*border: 1px
+			solid #3a3a3a;*/ border-radius: 3px; width: 
+			fit-content; width: -moz-fit-content;
+		}
+		
+		.articles-container h2 { font-size: 32px; padding: 5px 
+		0px;
+			margin-bottom: 10px; text-align: center;
+		}
+		
+		.article-body { /*display: table;*/
+		}
+		
+		.article-body p { /*width: 200px;*/ padding: 5px; 
+		font-family:
+			monospace; /*display: table-cell; 
+			vertical-align: middle;*/
+		}
+		
+		.article-body img { width: 600px; display: table-cell;
+		}
+		
+		.clearfix:after { display: table; content: ''; clear: 
+		both;
+		}
+		
+		#background {
+			background-attachment: fixed; background-repeat: 
+			repeat-y; background-position: center top; 
+			background-size: 100% 100%;
+		}
+		
+		footer { margin-top: 200px; text-align: center;
+		}
+	</style>

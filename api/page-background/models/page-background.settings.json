@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_backgrounds",
+  "info": {
+    "name": "Page Background"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "BackgroundImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
