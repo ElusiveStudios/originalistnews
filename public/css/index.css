@@ -52,15 +52,15 @@ nav ul li a:hover {
 }
 
 .articles-container {
-	width: 500px;
+	width: 600px;
 }
 
 .links-container {
-	width: 500px;
+	width: 600px;
 }
 
 .misc-container {
-	width: 300px;
+	width: 225px;
 }
 
 .articles-container, .links-container, .misc-container {
@@ -105,7 +105,6 @@ nav ul li a:hover {
 
 .article-body img {
 	width: 528px;
-	display: table-cell;
 }
 
 .clearfix:after {
@@ -133,19 +132,65 @@ footer {
 }
 
 @media all and (max-width: 1600px) {
+	.articles-container {
+		width: 500px;
+	}
 
+	.links-container {
+		width: 500px;
+	}
+	.article-body img {
+		width: 380px;
+	}		
+	
 }
 
 @media all and (max-width: 1440px) {
+	.articles-container {
+		width: 450px;
+	}
 
+	.links-container {
+		width: 450px;
+	}
+	.article-body img {
+		width: 350px;
+	}		
 }
 
 @media all and (max-width: 1280px) {
+	.articles-container {
+		width: 400px;
+	}
 
+	.links-container {
+		width: 400px;
+	}
+	
+	.article-body img {
+		width: 325px;
+	}
+	
+	.misc-container {
+		clear: both;
+		width: 96%;
+	}
 }
 
 @media all and (max-width: 992px) {
-
+	.articles-container {
+		margin: 0px;
+		padding: 0px;
+		width: fit-content;
+		width: -moz-fit-content;
+		margin: auto;
+	}
+	.article {
+		width: 400px;
+	}
+	.article-body img {
+		width: 325px;
+	}
 }
 
 @media all and (max-width: 768px) {
