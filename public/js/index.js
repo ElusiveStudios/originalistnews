@@ -1,7 +1,7 @@
 // (C)2020 Originalist Media
 APICall('articles');
 APICall('links');
-APICall('misc');
+APICall('miscs');
 
 APICall('page-logo');
 APICall('page-background');
@@ -83,7 +83,7 @@ function loadPage(endpoint, response) {
 			}		
 			break;
 			
-		case "misc":
+		case "miscs":
 			for (x = 0; x < response.length; x++) {
 				var endText = urlParser(response[x].Body);
 				var finalHTML =`<div class="article">
