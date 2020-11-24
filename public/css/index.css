@@ -77,6 +77,13 @@ nav ul li a:hover {
 	border-top-right-radius: 5px;	
 }
 
+.header-separator {
+	background-color: #dddddd;
+	height: 1px;
+	width: 97%;
+	margin: auto;	
+}
+
 .article-body {
 	padding: 12px;
 }

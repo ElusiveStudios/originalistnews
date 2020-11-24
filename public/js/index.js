@@ -36,6 +36,7 @@ function loadPage(endpoint, response) {
 				}
 				var finalHTML =`<div class="article">
 									<h2>${response[x].Title}</h2>
+									<hr class="header-separator">
 									<div class="article-body">
 										<p>${endText}</p>`;
 				try {
