@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "miscs",
   "info": {
-    "name": "Articles",
+    "name": "Misc",
     "description": ""
   },
   "options": {
@@ -16,17 +16,6 @@
     },
     "Body": {
       "type": "richtext"
-    },
-    "Image": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
     },
     "Date": {
       "type": "date"

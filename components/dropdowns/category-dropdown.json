@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_drodpown_category_dropdowns",
+  "info": {
+    "name": "CategoryDropdown",
+    "icon": "arrow-alt-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Election",
+        "COVID19",
+        "Politics",
+        "Economy",
+        "Social",
+        "Technology",
+        "Sports",
+        "Travel",
+        "Culture",
+        "Media"
+      ]
+    }
+  }
+}
