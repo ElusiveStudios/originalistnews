@@ -116,6 +116,12 @@ footer {
 	text-align: center;
 }
 
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
 @media all and (max-width: 600px) {
 	.articles-container {
 		margin: 0px;
