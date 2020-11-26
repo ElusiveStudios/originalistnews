@@ -63,9 +63,12 @@ nav ul li a:hover {
 	width: 225px;
 }
 
-.articles-container, .links-container, .misc-container {
+.articles-center-container, .links-center-container, .misc-center-container {
 	float: left;
-	margin: 20px;
+}
+
+.articles-container, .links-container, .misc-container {
+	margin: auto;
 	padding: 10px;
 	border-radius: 3px;	
 }
