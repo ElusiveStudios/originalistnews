@@ -162,9 +162,14 @@ footer {
 	.articles-center-container, .links-center-container {
 		clear: both;
 		width: 100%;
-	}	
+	}
+	.article-body img {
+		width: 320px;
+	}		
 }
 
 @media all and (max-width: 360px) {
-
+	.article-body img {
+		width: 268px;
+	}	
 }
