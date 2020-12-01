@@ -77,6 +77,7 @@ nav ul li a:hover {
 	border: 2px solid #dddddd;
 	border-radius: 5px;
 	margin: 12px 12px 15px 12px;
+	background-color: red;
 }
 
 .article h2 {
