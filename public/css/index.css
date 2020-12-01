@@ -67,6 +67,14 @@ nav ul li a:hover {
 	float: left;
 }
 
+.articles-center-container, .links-center-container {
+	width: 38%;
+}
+
+.misc-center-container {
+	width: 24%;
+}
+
 .articles-container, .links-container, .misc-container {
 	margin: auto;
 	padding: 10px;
