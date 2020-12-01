@@ -51,18 +51,6 @@ nav ul li a:hover {
 	background-color: #fff;
 }
 
-.articles-container {
-	width: 600px;
-}
-
-.links-container {
-	width: 600px;
-}
-
-.misc-container {
-	width: 225px;
-}
-
 .articles-center-container, .links-center-container, .misc-center-container {
 	float: left;
 }
