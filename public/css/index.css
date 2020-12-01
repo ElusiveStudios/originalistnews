@@ -139,7 +139,10 @@ footer {
 @media all and (max-width: 1440px) {
 	.article-body img {
 		width: 320px;
-	}		
+	}
+	.article h2 {
+		font-size: 28px;
+	}	
 }
 
 @media all and (max-width: 992px) {
@@ -152,7 +155,7 @@ footer {
 	}
 	
 	.article h2 {
-		font-size: 28px;
+		font-size: 26px;
 	}
 }
 
@@ -179,10 +182,22 @@ footer {
 	.article {
 		margin: 2px;
 	}
+	* {
+		font-size: 16px;
+	}
+	.article h2 {
+		font-size: 28px;
+	}		
 }
 
 @media all and (max-width: 360px) {
 	.article-body img {
 		width: 240px;
-	}	
+	}
+	* {
+		font-size: 14px;
+	}
+	.article h2 {
+		font-size: 24px;
+	}		
 }
