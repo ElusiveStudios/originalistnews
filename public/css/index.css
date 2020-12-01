@@ -8,6 +8,8 @@
 	color: #3a3a3a;
 	line-height: 1;
 	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
 	font-family: 'Playfair Display', serif;
 }
 
