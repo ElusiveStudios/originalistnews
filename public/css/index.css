@@ -142,15 +142,20 @@ footer {
 	}		
 }
 
-@media all and (max-width: 1280px) {
-
-
 @media all and (max-width: 992px) {
-
+	.misc-center-container {
+		clear: both;
+		width: 100%;
+	}
+	.articles-center-container, .links-center-container {
+		width: 50%;
+	}	
 }
 
 @media all and (max-width: 768px) {
-
+	.article-body img {
+		width: 280px;
+	}	
 }
 
 @media all and (max-width: 580px) {
