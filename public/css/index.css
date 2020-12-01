@@ -149,10 +149,20 @@ footer {
 	}
 	.articles-center-container, .links-center-container {
 		width: 50%;
-	}	
+	}
+	
+	.article h2 {
+		font-size: 28px;
+	}
 }
 
 @media all and (max-width: 768px) {
+	* {
+		font-size: 14px;
+	}
+	.article h2 {
+		font-size: 24px;
+	}	
 	.article-body img {
 		width: 268px;
 	}	
@@ -165,11 +175,14 @@ footer {
 	}
 	.article-body img {
 		width: 320px;
-	}		
+	}
+	.article {
+		margin: 2px;
+	}
 }
 
 @media all and (max-width: 360px) {
 	.article-body img {
-		width: 268px;
+		width: 240px;
 	}	
 }
